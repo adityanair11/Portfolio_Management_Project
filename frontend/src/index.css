@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   Apple-style global setup
+   ========================= */
+
+:root {
+  /* Softer dark background (not pitch black) - made even softer */
+  --apple-bg: #0f1419;
+
+  /* ❗ KEY FIX: avoid pure white on dark */
+  --apple-text: rgba(255, 255, 255, 0.92);
+  --apple-muted: rgba(255, 255, 255, 0.55);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0a0e1a, #0f1419, #0a0e1a);
+  color: var(--apple-text);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "SF Pro Display",
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  letter-spacing: -0.01em;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.25);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================
+   Soft ambient background glow
+   (slightly increased for better atmosphere)
+   ========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      1400px 700px at 25% 15%,
+      rgba(56, 189, 248, 0.08),
+      transparent 50%
+    ),
+    radial-gradient(
+      1400px 700px at 75% 85%,
+      rgba(168, 85, 247, 0.06),
+      transparent 50%
+    );
+}
+
+/* =========================
+   Scrollbar styling
+   ========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12141a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}

@@ -6,7 +6,7 @@ import { useCurrency } from './context/CurrencyContext';
 import * as api from './services/api';
 
 function App() {
-  const { currency, toggleCurrency, getCurrencySymbol } = useCurrency();
+  const { currency, toggleCurrency, getCurrencySymbol } = useCurrency();//Adding a comment to app.jsx
   
   const [holdings, setHoldings] = useState([]);
   const [loading, setLoading] = useState(true);

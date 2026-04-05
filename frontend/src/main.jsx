@@ -11,3 +11,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </CurrencyProvider>
   </React.StrictMode>,
 )
+//Adding a comment to main.jsx

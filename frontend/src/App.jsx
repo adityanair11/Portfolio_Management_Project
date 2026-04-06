@@ -3,7 +3,8 @@ import { TrendingUp, Plus, Edit2, Trash2, RefreshCw, DollarSign, IndianRupee, Ch
 import StockSearchDropdown from './components/StockSearchDropdown';
 import { stocksData } from './data/stocksData';
 import { useCurrency } from './context/CurrencyContext';
-import * as api from './services/api';
+import * as api from './services/api';// Optimizing app.jsx structure
+Shortening and optimizing app.jsx
 
 function App() {
   const { currency, toggleCurrency, getCurrencySymbol } = useCurrency();//Adding a comment to app.jsx

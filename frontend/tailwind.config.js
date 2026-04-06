@@ -9,4 +9,4 @@ export default {
   },
   plugins: [],
 }
-//Tailwind.css file end
+//Optimizing code in Tailwind.config.js
